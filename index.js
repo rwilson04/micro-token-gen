@@ -32,7 +32,8 @@ function sendToken(size, res) {
 }
 
 app.get('*', function(req, res) {
-	res.json({'error': 'Route not found'}, 404);
+	res.status(404);
+	res.json({'error': 'Route not found'});
 });
 
 app.listen(80);
